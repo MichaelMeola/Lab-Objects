@@ -331,7 +331,18 @@ const employees = [
     3. Return the updated employee array.
 */
 
+function employeeUpdater(){
 
+  for (let i = 0; i < employees.length; i++){
+    if(employees[i].firstName === `Theo`){
+      employees.splice(i, 1)
+    } else if(employees[i].firstName === `Lorie`){
+      employees[i].department = `HR`
+    }
+  }
+
+  return employees
+}
 
 
 /// ////////////// PROBLEM 16 ///////////////////
@@ -399,10 +410,6 @@ const myCar = {
 
 
 
-
-
-
-
 /// ////////////// PROBLEM 18 ///////////////////
 
 /*
@@ -419,7 +426,11 @@ const myCar = {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers({ first, second, third }){
+  
+ 
+}
+
 
 /// ////////////// PROBLEM 19 ///////////////////
 

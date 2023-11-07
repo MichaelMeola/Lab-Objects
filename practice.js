@@ -14,7 +14,12 @@
   Then alert your name using dot notation.
 */
 
-//Code here
+const me = {
+  name: `Michael`,
+  age: 21,
+}
+
+  alert(me.name)
 
 /// ////////////// PROBLEM 2 ///////////////////
 
@@ -23,21 +28,34 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+const favoriteThings = {
+  band: `MEOLA`,   
+  food: `Tacos`,
+  person: `Mother`,
+  book: `The Alchemist`,
+  movie: `Shrek`,
+  holiday: `Christmas`
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
 
-//Code here
+favoriteThings.car = `Miata`
+
+favoriteThings.brand = `Nike`
+
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
-//Code here
+favoriteThings.food = `Chicken Nuggets`
+
+favoriteThings.book = `Harry Potter`
+
 
 /// ////////////// PROBLEM 3 ///////////////////
 
@@ -58,7 +76,9 @@ const user2 = {
   Make that change without editing the code above.
 */
 
-//Code Here
+user2.name = `Bryan G. Smith`
+
+user2.email = `bryan.smith@devmounta.in`
 
 /// ////////////// PROBLEM 4 ///////////////////
 
@@ -69,7 +89,12 @@ let shoppingCart = {};
   It should add a new key-value pair to the cart with the item and quantity.
 */
 
-//Code Here
+function addToCart(item, quantity){
+
+  shoppingCart[item] = quantity
+
+return addToCart
+}
 
 /// ////////////// PROBLEM 5 ///////////////////
 
@@ -79,7 +104,19 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj){
+    
+  for(let key in obj){
+    
+     if (obj[key] > 10){
+
+       obj[key] = 0
+     }
+             
+  }
+
+    return obj
+}
 
 /// ////////////// PROBLEM 6 ///////////////////
 
@@ -89,7 +126,18 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function double(obj){
+
+  for(let key in obj){
+
+      obj[key] = obj[key] * 2
+
+  }
+
+  return obj
+}
+
+
 
 /// ////////////// PROBLEM 7 ///////////////////
 
@@ -98,7 +146,15 @@ let shoppingCart = {};
 */
 
 function showValues(obj) {
-  //Code Here
+ 
+  let concatenatedString = ''
+
+  for (let key in obj) {
+    
+    concatenatedString += obj[key]
+  }
+
+  return concatenatedString
 }
 
 /// ////////////// PROBLEM 8 ///////////////////
@@ -109,7 +165,10 @@ function showValues(obj) {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode){
+  
+  return {cardNumber, expirationDate, securityCode}
+}
 
 /// ////////////// PROBLEM 9 ///////////////////
 
@@ -118,7 +177,12 @@ function showValues(obj) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj) {
+    
+  delete obj.password
+  
+  return obj
+}
 
 /// ////////////// PROBLEM 10 ///////////////////
 
@@ -135,7 +199,11 @@ const deleteTheBigNumbers = {
   Write a for...in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for (let key in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key]
+  }
+}
 
 /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
@@ -160,7 +228,7 @@ const carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-//Code Here
+let {color, make, model, year} = carDetails
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -171,7 +239,8 @@ const carDetails = {
 */
 
 function greeting(obj) {
-  //Code Here
+
+  let {firstName, lastName, title} = obj
 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -188,7 +257,14 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj) {
+  
+  const {utah, california, texas, arizona} = obj
+
+  const total = utah + california + texas + arizona
+
+  return total
+}
 
 /// ////////////// PROBLEM 14 ///////////////////
 
@@ -200,7 +276,16 @@ function greeting(obj) {
   Return false otherwise.
 */
 
-//Code Here
+function usCanadaBorder(arr) {
+  
+  let [latitude, longitude] = arr
+
+  if (latitude === 49 && longitude >= -123 && longitude <= -95) {
+    return true
+  } else {
+    return false
+  }
+}
 
 /// ////////////// PROBLEM 15 ///////////////////
 
@@ -246,7 +331,8 @@ const employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+
+
 
 /// ////////////// PROBLEM 16 ///////////////////
 
@@ -272,9 +358,8 @@ const cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-let grumpyActivity;
-let fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1]
+let fluffy2ndFriend = cat.catFriends[1].name
 
 /// ////////////// PROBLEM 17 ///////////////////
 
@@ -312,7 +397,11 @@ const myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+
+
+
+
+
 
 /// ////////////// PROBLEM 18 ///////////////////
 
